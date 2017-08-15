@@ -1,0 +1,154 @@
+$pink: hsla(307,95,80,1);
+$green: hsla(120,95,80,1);
+$blue: hsla(196,95,80,1);
+
+.app-container{
+   .page-header{
+      display: flex;
+      padding: 1em 10vw;
+      justify-content: space-between;
+      overflow-x: hidden;
+
+      .name-container{
+         display: flex;
+         justify-content: flex-start;
+         align-items: flex-end;
+
+         img{
+            width: 12vw;
+            height: 12vw;
+            border-radius: 6vw;
+         }
+
+         .name{
+            font-family: 'Roboto', sans-serif;
+            font-size: 6.8vw;
+            line-height: 0.75em;
+
+            font-weight: bold;
+            text-transform: uppercase;
+            text-indent: 0.2em;
+
+            .first{
+               letter-spacing: 0.06em;
+               text-indent: 0.25em;
+            }
+         }
+
+      }
+
+      .location-container{
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-end;
+
+         .contact{
+            display: flex;
+            align-items: center;
+
+            font-family: 'Roboto', sans-serif;
+            font-size: 2.8vw;
+
+            a{
+               color: #000;
+               padding-left: 0.3em;
+            }
+         }
+
+         .location{
+            display: flex;
+            align-items: flex-end;
+
+            font-family: 'Pacifico', cursive;
+            font-size: 2.6vw;
+
+            filter: drop-shadow(2px 2px 0px $pink)
+            drop-shadow(3px 3px 0px $green)
+            drop-shadow(4px 4px 0px $blue);
+
+            svg{
+               padding-left: 0.2em;
+
+               height: 1.6em;
+               width: auto;
+
+               .australia{
+                  fill:none;
+                  stroke: #000;
+                  stroke-width: 20;
+
+                  stroke-dasharray: 100em;
+
+                  animation: australia 10000ms ease-in-out infinite;
+               }
+            }
+         }
+      }
+   }
+
+   .container{
+
+      .content{
+         padding: 0 10vw;
+         padding-bottom: 20vh;
+
+         h1{
+            padding-top: 0.3em;
+         }
+
+         h2{
+            small{
+               padding-left: 0.5em;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 550px){
+   .app-container{
+      .page-header{
+         flex-direction: column;
+
+         .name-container{
+            align-items: center;
+            img{
+               width: 24vw;
+               height: 24vw;
+               border-radius: 12vw;
+            }
+            .name{
+               font-size: 11vw;
+            }
+         }
+
+         .location-container{
+            padding-top: 1em;
+            align-items: center;
+            .contact{
+               font-size: 7vw;
+            }
+
+            .location{
+               font-size: 6vw;
+
+               svg{
+                  height: 8vw;
+               }
+            }
+         }
+      }
+   }
+}
+
+@keyframes australia{
+   0%{
+      stroke-dashoffset: 100em;
+   }
+   50%{
+      stroke-dashoffset: 0em;
+   }
+   100%{
+      stroke-dashoffset: -100em;
+   }
+}
