@@ -33,6 +33,18 @@ export default class App extends Component {
                <div className="content">
                   <h1>Projects</h1>
                   <h2>
+                     <a href="http://github.com/camboio/bird-watcher-3000" target="_blank">BIRD WATCHER 3000</a>
+                     <small>
+                        a discord bot for watching the falcons at 367 collins st melbourne
+                     </small>
+                  </h2>
+                  <h2>
+                     <a href="http://avo.cambo.io/" target="_blank">clicker</a>
+                     <small>
+                        a react/redux project to make an idle clicker game. currently in alpha
+                     </small>
+                  </h2>
+                  <h2>
                      <a href="http://n64.com.au" target="_blank">n64</a>
                      <small>
                         a react/three.js project for displaying 3d content over the web
